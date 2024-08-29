@@ -12,7 +12,7 @@ class Home extends React.Component<Props, State> {
   }
 
   render() {
-    return <HomeContainer>Hello I'm Chris</HomeContainer>;
+    return <HomeContainer>I'm Chris.</HomeContainer>;
   }
 }
 
