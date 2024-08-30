@@ -18,7 +18,7 @@ class Home extends React.Component<Props, State> {
       <HomeContainer>
         <Center>
           <Intro>
-            <Text>Hey, I'm Chris</Text>
+            <Text>Hey, I'm Chris.</Text>
             <Text>
               Recreational Punter. Previously professional punter at{" "}
               <a href="https://akunacapital.com/">Akuna</a>.

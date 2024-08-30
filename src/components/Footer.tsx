@@ -11,7 +11,9 @@ const Footer = () => {
             <FooterLink href="https://www.linkedin.com/in/chris-y-shen/">
               → Linkedin
             </FooterLink>
-            <FooterLink href="#">→ Instagram</FooterLink>
+            <FooterLink href="https://www.instagram.com/christophershen/">
+              → Instagram
+            </FooterLink>
             <FooterLink href="mailto:chris.y.shen@gmail.com">
               → Email
             </FooterLink>
