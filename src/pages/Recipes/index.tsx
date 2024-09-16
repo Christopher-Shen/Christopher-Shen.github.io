@@ -6,10 +6,12 @@ import Header from "../../components/Header";
 import streetFriedTofuImg from "../../assets/street_fried_tofu.jpg";
 import groundBeefSauceImg from "../../assets/ground_beef_sauce.jpg";
 import porkMushroomImg from "../../assets/pork_mushroom.jpg";
+import boiledBeefSlicesImg from "../../assets/boiled_beef_slices.jpg";
 
 const recipes = [
   { id: "street-fried-tofu", title: "Street Fried Tofu", image: streetFriedTofuImg },
   { id: "ground-beef-sauce", title: "Ground Beef Sauce", image: groundBeefSauceImg },
+  { id: "boiled-beef-slices", title: "Boiled Beef Slices", image: boiledBeefSlicesImg },
   { id: "coming-soon-recipe", title: "Pork Mushroom", image: porkMushroomImg },
 ];
 

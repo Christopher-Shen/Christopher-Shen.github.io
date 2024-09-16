@@ -6,6 +6,7 @@ import Recipes from "./pages/Recipes";
 import StreetFriedTofu from "./pages/Recipes/StreetFriedTofuRecipe";
 import GroundBeefSauce from "./pages/Recipes/GroundBeefSauceRecipe";
 import ComingSoonRecipe from "./pages/Recipes/ComingSoonRecipe";
+import BoiledBeefSlices from "./pages/Recipes/BoiledBeefSlices";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/recipes/street-fried-tofu" element={<StreetFriedTofu />} />
         <Route path="/recipes/ground-beef-sauce" element={<GroundBeefSauce />} />
         <Route path="/recipes/coming-soon-recipe" element={<ComingSoonRecipe />} />
+        <Route path="/recipes/boiled-beef-slices" element={<BoiledBeefSlices />} />
       </Routes>
     </HashRouter>
   );
