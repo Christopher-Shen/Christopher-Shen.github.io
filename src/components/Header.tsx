@@ -19,7 +19,7 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px; // Reduced top and bottom padding
+  padding: 15px 40px;
   // background-color: #f8f8f8;
   // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
