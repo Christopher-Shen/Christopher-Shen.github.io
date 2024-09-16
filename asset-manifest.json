@@ -1,18 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.4c961217.js",
+    "main.js": "/static/js/main.529b0b7a.js",
     "static/js/453.e43c3ef6.chunk.js": "/static/js/453.e43c3ef6.chunk.js",
     "static/media/cardiac_modeling.pdf": "/static/media/cardiac_modeling.95537e9a6f3e687d67e5.pdf",
     "static/media/bme.pdf": "/static/media/bme.5c978ff27d05d194ee6f.pdf",
+    "static/media/street_fried_tofu.jpg": "/static/media/street_fried_tofu.2c7ff0c4bb60c4b098c7.jpg",
+    "static/media/pork_mushroom.jpg": "/static/media/pork_mushroom.7d4bc1f9ec15a7395708.jpg",
+    "static/media/ground_beef_sauce.jpg": "/static/media/ground_beef_sauce.56f0df115afdedf2c243.jpg",
+    "static/media/recipe_placeholder.jpeg": "/static/media/recipe_placeholder.f17ef7d98761426cb419.jpeg",
     "static/media/headshot.jpg": "/static/media/headshot.8ae3c27e69cfc8748af3.jpg",
     "index.html": "/index.html",
     "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.4c961217.js.map": "/static/js/main.4c961217.js.map",
+    "main.529b0b7a.js.map": "/static/js/main.529b0b7a.js.map",
     "453.e43c3ef6.chunk.js.map": "/static/js/453.e43c3ef6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.4c961217.js"
+    "static/js/main.529b0b7a.js"
   ]
 }
