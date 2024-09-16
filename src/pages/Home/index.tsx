@@ -21,7 +21,9 @@ class Home extends React.Component<Props, State> {
   render() {
     return (
       <HomeContainer>
-        <Header></Header>
+        <HeaderWrapper>
+          <Header />
+        </HeaderWrapper>
         <ContentWrapper>
           <Center>
             <HeadshotContainer src={headshot} alt="Chris Shen" />
@@ -61,12 +63,15 @@ const HomeContainer = styled.div`
   flex-direction: column;
 `;
 
+const HeaderWrapper = styled.div`
+`;
+
 const ContentWrapper = styled.main`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem 2rem;
+  padding: 2rem;
   background-color: #f5f5f5;
 `;
 
@@ -77,8 +82,7 @@ const Center = styled.div`
   gap: 2rem;
   max-width: 800px;
   width: 100%;
-  padding: 0.5rem; // Further reduced padding
-  margin-top: -1rem; // Added negative margin to pull content up
+  padding: 1rem;
   
   @media (min-width: 768px) {
     flex-direction: row;

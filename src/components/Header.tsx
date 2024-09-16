@@ -7,7 +7,6 @@ const Header = () => {
       <NavigationContainer>
         <HeaderLink href="home">Home</HeaderLink>
         <HeaderLink href="recipes">Recipes</HeaderLink>
-        {/* <HeaderLink href="#recipes">Recipes</HeaderLink> */}
       </NavigationContainer>
     </HeaderContainer>
   );
