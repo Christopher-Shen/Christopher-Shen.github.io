@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import resume from "../assets/ChrisShen_Resume.pdf"
 
 const Footer = () => {
   return (
@@ -49,17 +48,6 @@ const Footer = () => {
               fill="currentColor"
             >
               <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
-            </svg>
-          </FooterLink>
-          <FooterLink href={resume} aria-label="Resume">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15h8v2H8v-2zm0-4h8v2H8v-2zm0-4h3v2H8V7z" />
             </svg>
           </FooterLink>
         </LinksContainer>
