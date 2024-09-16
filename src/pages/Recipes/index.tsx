@@ -9,7 +9,7 @@ import porkMushroomImg from "../../assets/pork_mushroom.jpg";
 
 const recipes = [
   { id: "street-fried-tofu", title: "Street Fried Tofu", image: streetFriedTofuImg },
-  { id: "coming-soon-recipe", title: "Ground Beef Sauce", image: groundBeefSauceImg },
+  { id: "ground-beef-sauce", title: "Ground Beef Sauce", image: groundBeefSauceImg },
   { id: "coming-soon-recipe", title: "Pork Mushroom", image: porkMushroomImg },
 ];
 
