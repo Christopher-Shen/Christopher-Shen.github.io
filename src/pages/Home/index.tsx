@@ -1,12 +1,17 @@
 import * as React from "react";
 
-import { createGlobalStyle, styled } from "styled-components";
+import { styled } from "styled-components";
+
+import headshot from "../../assets/headshot.jpg"
+import bme from "../../assets/bme.pdf"
+import cardiac_modeling from "../../assets/cardiac_modeling.pdf"
 
 import Footer from "../../components/Footer";
+import Header from "../../components/Header"
 
-interface State {}
+interface State { }
 
-interface Props {}
+interface Props { }
 
 class Home extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -16,54 +21,107 @@ class Home extends React.Component<Props, State> {
   render() {
     return (
       <HomeContainer>
-        <Center>
-          <Intro>
-            <Text>Hey, I'm Chris.</Text>
-            <Text>
-              Recreational Punter. Previously professional punter at{" "}
-              <a href="https://akunacapital.com/">Akuna</a>.
-            </Text>
-          </Intro>
-        </Center>
-        <Footer></Footer>
+        <Header></Header>
+        <ContentWrapper>
+          <Center>
+            <HeadshotContainer src={headshot} alt="Chris Shen" />
+            <TextContainer>
+              <Name>Hey, I'm Chris.</Name>
+              <Bio>
+                Recreational trader. Former <strong>crypto options market maker</strong> at{" "}
+                <StyledLink href="https://akunacapital.com/" target="_blank" rel="noopener noreferrer">
+                  Akuna
+                </StyledLink>
+                . While there, I designed a vol arbitrage strategy, implemented a delta pooling
+                algorithm, and managed intraday risk.
+                <br />
+                <br />
+                In a past life, I was a <strong>software engineer</strong> at a social start up,
+                Yada. Before that, I was a <strong>biomedical engineer</strong> who grew stem cells
+                and turned them into{" "}
+                <StyledLink href={bme} target="_blank" rel="noopener noreferrer">
+                  cardiac tissue
+                </StyledLink>{" "}
+                for <StyledLink href={cardiac_modeling} target="_blank" rel="noopener noreferrer">
+                  disease modeling
+                </StyledLink>.
+              </Bio>
+            </TextContainer>
+          </Center>
+        </ContentWrapper>
+        <Footer />
       </HomeContainer>
     );
   }
 }
 
-// const GlobalStyle = createGlobalStyle`
-//   body{
-//     font-family: 'Inter', system-ui;
-//     font-optical-sizing: auto;
-//     font-weight: 100;
-//     font-style: normal;
-//   }
-// `;
-
 const HomeContainer = styled.div`
-  height: 100%;
-  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ContentWrapper = styled.main`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem 2rem;
+  background-color: #f5f5f5;
 `;
 
 const Center = styled.div`
   display: flex;
-  width: 68%;
-  height: 400px;
-  margin-right: auto;
-  margin-left: auto;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+  padding: 0.5rem; // Further reduced padding
+  margin-top: -1rem; // Added negative margin to pull content up
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
-const Intro = styled.div`
+const HeadshotContainer = styled.img`
+  width: 250px;
+  height: 250px;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+const TextContainer = styled.div`
   text-align: center;
+  
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
-const Text = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-  padding-bottom: 5px;
-  font-family: "Inter", system-ui;
-  font-weight: 200;
+const Name = styled.h1`
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+`;
+
+const Bio = styled.p`
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #555;
+`;
+
+const StyledLink = styled.a`
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: 500;
+  
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export default Home;
