@@ -1,15 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.1bd29563.js",
+    "main.js": "/static/js/main.83530681.js",
     "static/js/453.e43c3ef6.chunk.js": "/static/js/453.e43c3ef6.chunk.js",
+    "static/media/cardiac_modeling.pdf": "/static/media/cardiac_modeling.95537e9a6f3e687d67e5.pdf",
+    "static/media/bme.pdf": "/static/media/bme.5c978ff27d05d194ee6f.pdf",
+    "static/media/headshot.jpg": "/static/media/headshot.8ae3c27e69cfc8748af3.jpg",
+    "static/media/ChrisShen_Resume.pdf": "/static/media/ChrisShen_Resume.641f19606e37f838ef02.pdf",
     "index.html": "/index.html",
     "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.1bd29563.js.map": "/static/js/main.1bd29563.js.map",
+    "main.83530681.js.map": "/static/js/main.83530681.js.map",
     "453.e43c3ef6.chunk.js.map": "/static/js/453.e43c3ef6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.1bd29563.js"
+    "static/js/main.83530681.js"
   ]
 }
