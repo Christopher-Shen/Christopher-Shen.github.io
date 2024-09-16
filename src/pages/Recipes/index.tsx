@@ -43,7 +43,6 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  position: relative;
 `;
 
 const MainContent = styled.main`
@@ -95,11 +94,11 @@ const float = keyframes`
 `;
 
 const CookingUtensils = styled.div`
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   display: flex;
+  justify-content: center;
   gap: 15px;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.8);
 `;
 
 const Utensil = styled.span`
