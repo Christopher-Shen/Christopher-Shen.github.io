@@ -66,7 +66,7 @@ const FooterContainer = styled.footer`
 `;
 
 const ContentWrapper = styled.div`
-  max-width: 1200px;
+  width: 95%;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
