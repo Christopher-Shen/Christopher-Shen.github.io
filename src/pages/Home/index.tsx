@@ -26,7 +26,7 @@ class Home extends React.Component<Props, State> {
       <MetaTags
         title="Chris Shen"
         description="Recreational trader. Previously professional trader at Akuna."
-        image={logo}
+        image="https://longvol.com/#/media/logo512.png"
         url="https://longvol.com"
       />
       <HomeContainer>

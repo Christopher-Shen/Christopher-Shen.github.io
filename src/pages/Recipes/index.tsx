@@ -22,7 +22,7 @@ const RecipesPage: React.FC = () => {
       <MetaTags
         title="Chris Shen's Recipe Collection"
         description="Explore a variety of delicious recipes"
-        image={groundBeefSauceImg}
+        image="https://longvol.com/#/media/ground_beef_sauce.jpg"
         url="https://longvol.com"
       />
       <Header />
