@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Header from "../../components/Header";
 import MetaTags from '../../components/MetaTags';
 
@@ -11,6 +11,9 @@ import boiledBeefSlicesImg from "../../assets/boiled_beef_slices.jpg";
 import cabbageStirfryImg from "../../assets/cabbage_stirfry.jpg";
 import chickenAdoboImg from "../../assets/chicken_adobo.jpg";
 import squidAndChiveImg from "../../assets/squid_and_chives.jpg";
+import bokChoyImg from "../../assets/bok_choy.jpg";
+
+
 const recipes = [
   { id: "street-fried-tofu", title: "Street Fried Tofu", image: streetFriedTofuImg },
   { id: "ground-beef-sauce", title: "Ground Beef Sauce", image: groundBeefSauceImg },
@@ -19,6 +22,7 @@ const recipes = [
   { id: "chicken-adobo", title: "Chicken Adobo", image: chickenAdoboImg },
   { id: "squid-and-chive", title: "Squid and Chive", image: squidAndChiveImg },
   { id: "coming-soon-recipe", title: "Pork Mushroom", image: porkMushroomImg },
+  { id: "bok-choy", title: "Bok Choy", image: bokChoyImg },
 ];
 
 const RecipesPage: React.FC = () => {
@@ -57,7 +61,7 @@ const PageContainer = styled.div`
 const MainContent = styled.main`
   flex: 1;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
 `;
 
 const Title = styled.h1`
