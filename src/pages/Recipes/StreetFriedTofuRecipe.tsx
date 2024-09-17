@@ -4,7 +4,7 @@ import streetFriedTofuImg from "../../assets/street_fried_tofu.jpg";
 
 const StreetFriedTofuRecipe: React.FC = () => {
   const recipeData = {
-    title: "Street Flavor Tofu",
+    title: "Street Fried Tofu",
     image: streetFriedTofuImg,
     ingredients: [
       {
