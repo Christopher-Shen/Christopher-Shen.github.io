@@ -3,11 +3,14 @@ import * as React from "react";
 import { styled } from "styled-components";
 
 import headshot from "../../assets/headshot.jpg"
+import logo from "../../assets/logo512.png"
+
 import bme from "../../assets/bme.pdf"
 import cardiac_modeling from "../../assets/cardiac_modeling.pdf"
 
 import Footer from "../../components/Footer";
 import Header from "../../components/Header"
+import MetaTags from "../../components/MetaTags";
 
 interface State { }
 
@@ -19,7 +22,13 @@ class Home extends React.Component<Props, State> {
   }
 
   render() {
-    return (
+    return (<>
+      <MetaTags
+        title="Chris Shen"
+        description="Recreational trader. Previously professional trader at Akuna."
+        image={logo}
+        url="https://longvol.com"
+      />
       <HomeContainer>
         <HeaderWrapper>
           <Header />
@@ -53,6 +62,7 @@ class Home extends React.Component<Props, State> {
         </ContentWrapper>
         <Footer />
       </HomeContainer>
+    </>
     );
   }
 }
