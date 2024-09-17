@@ -27,7 +27,7 @@ const BoiledBeefSlicesPage: React.FC = () => {
       },
     ],
     steps: [
-      "Slice the chuck roast into thin slices and marinate in soy sauce, flour, and oil for at lesat 30 minutes.",
+      "Slice the chuck roast into thin slices and marinate in soy sauce, flour, and oil for at least 30 minutes.",
       "Boil the beef slices in water for 10 minutes or until cooked through. Set aside.",
       "Add oil and wait until shimmering, add half of the garlic and cook until fragrant. Add in the sauce, potatoe starch, and water. Simmer until the sauce thickens.",
       "Add in the beef slices and simmer for another 2 minutes. Add in the remaining garlic and serve. Optionally add in cilantro as a garnish.",

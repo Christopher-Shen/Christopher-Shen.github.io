@@ -9,7 +9,7 @@ import GroundBeefSauce from "./pages/Recipes/GroundBeefSauceRecipe";
 import ComingSoonRecipe from "./pages/Recipes/ComingSoonRecipe";
 import BoiledBeefSlices from "./pages/Recipes/BoiledBeefSlices";
 import CabbageStirfry from "./pages/Recipes/CabbageStirfryRecipe";
-import ChickenAdobo from "./pages/Recipes/SquidAndChiveRecipe";
+import ChickenAdobo from "./pages/Recipes/ChickenAdoboRecipe";
 import SquidAndChive from "./pages/Recipes/SquidAndChiveRecipe";
 import BokChoy from "./pages/Recipes/BokChoyRecipe";
 
