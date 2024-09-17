@@ -10,24 +10,33 @@ const GroundBeefSaucePage: React.FC = () => {
       {
         title: "Sauce",
         items: [
-          { name: "甜面酱", amount: "" },
-          { name: "黄豆酱 (soy bean paste)", amount: "" },
-          { name: "Oyster Sauce", amount: "" },
-          { name: "Soy Sauce", amount: "" },
-          { name: "Alcohol", amount: "" },
-          { name: "Sugar", amount: "" },
-          { name: "Green Onion", amount: "" },
+          { name: "Sweet fermented flour paste", amount: "2 tbsp" },
+          { name: "Soy bean paste", amount: "4 tbsp" },
+          { name: "Oyster Sauce", amount: "2 tbsp" },
+          { name: "Cooking wine", amount: "3 tbsp" },
+          { name: "Soy sauce", amount: "2 tbsp" },
+          { name: "Sugar", amount: "2 tbsp" },
+        ],
+      },
+      {
+        title: "Everything else",
+        items: [
+          { name: "Ground beef", amount: "1 lb" },
           { name: "Cilantro", amount: "" },
           { name: "Celery", amount: "" },
           { name: "Onion", amount: "" },
           { name: "Peppers", amount: "" },
+          { name: "Garlic", amount: "6 cloves, minced" },
+          { name: "Ginger", amount: "1 tbsp, minced" },
         ],
       },
     ],
     steps: [
-      "Heat up the oil, put: cilantro, celery, onion, leek in.",
-      "花椒，八角，香叶，小茴香， 桂皮",
-      "Fry the ground beef with minced ginger, garlic, minced red pepper/yellow pepper until beef browns",
+      "Heat oil until shimmering, add ground beef and cook until browned.",
+      "Add garlic and ginger and cook until fragrant.",
+      "Add in diced peppers. These can be any peppers just depends on how spicy you want it.",
+      "Add in the sauce slurry and simmer for about 20 minutes or until the sauce thickens.",
+      "Add white sesame seeds and garnish with cilantro.",
     ],
   };
 

@@ -8,11 +8,16 @@ import streetFriedTofuImg from "../../assets/street_fried_tofu.jpg";
 import groundBeefSauceImg from "../../assets/ground_beef_sauce.jpg";
 import porkMushroomImg from "../../assets/pork_mushroom.jpg";
 import boiledBeefSlicesImg from "../../assets/boiled_beef_slices.jpg";
-
+import cabbageStirfryImg from "../../assets/cabbage_stirfry.jpg";
+import chickenAdoboImg from "../../assets/chicken_adobo.jpg";
+import squidAndChiveImg from "../../assets/squid_and_chives.jpg";
 const recipes = [
   { id: "street-fried-tofu", title: "Street Fried Tofu", image: streetFriedTofuImg },
   { id: "ground-beef-sauce", title: "Ground Beef Sauce", image: groundBeefSauceImg },
   { id: "boiled-beef-slices", title: "Boiled Beef Slices", image: boiledBeefSlicesImg },
+  { id: "cabbage-stirfry", title: "Cabbage Stirfry", image: cabbageStirfryImg },
+  { id: "chicken-adobo", title: "Chicken Adobo", image: chickenAdoboImg },
+  { id: "squid-and-chive", title: "Squid and Chive", image: squidAndChiveImg },
   { id: "coming-soon-recipe", title: "Pork Mushroom", image: porkMushroomImg },
 ];
 

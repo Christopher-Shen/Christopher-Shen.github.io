@@ -10,8 +10,8 @@ const StreetFriedTofuRecipe: React.FC = () => {
       {
         title: "Batter",
         items: [
-          { name: "Flour", amount: "1 cup" },
-          { name: "Egg", amount: "1" },
+          { name: "Flour", amount: "2 cups" },
+          { name: "Egg", amount: "2" },
         ],
       },
       {
@@ -22,18 +22,16 @@ const StreetFriedTofuRecipe: React.FC = () => {
           { name: "Garlic", amount: "2 cloves, minced" },
           { name: "Soy Sauce", amount: "2 tbsp" },
           { name: "Sugar", amount: "1 tsp" },
-          { name: "Cumin Powder", amount: "1/2 tsp" },
-          { name: "Vinegar", amount: "1 tbsp" },
+          { name: "Cumin Powder", amount: "1 tsp" },
+          { name: "Vinegar", amount: "2 tbsp" },
         ],
       },
     ],
     steps: [
-      "Cut tofu into cubes.",
-      "Dredge tofu in flour, then egg.",
-      "Fry tofu cubes in a pan until golden brown.",
-      "Mix sauce ingredients in a bowl.",
-      "Toss fried tofu with the sauce.",
-      "Serve hot and enjoy!",
+      "Cut tofu into cubes and leave them out for a little to let them dry a bit.",
+      "Prep the sauce by combing all the ingredients in a small bowl.",
+      "Dredge tofu in flour, then egg and fry in a pan until a golden shell is made",
+      "Once all the tofu is fried, add all the tofu and sauce into a pan and simmer until the sauce thickens.",
     ],
   };
 
