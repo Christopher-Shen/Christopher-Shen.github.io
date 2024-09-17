@@ -29,7 +29,7 @@ const RecipePage: React.FC<RecipeProps> = ({ title, image, ingredients, steps })
       <MetaTags
         title={title}
         description={description}
-        image={image}
+        image="https://longvol.com/#/media/ground_beef_sauce.jpg"
         url={url}
       />
       <PageContainer>
