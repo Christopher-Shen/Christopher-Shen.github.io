@@ -8,6 +8,7 @@ import StreetFriedTofu from "./pages/Recipes/StreetFriedTofuRecipe";
 import GroundBeefSauce from "./pages/Recipes/GroundBeefSauceRecipe";
 import ComingSoonRecipe from "./pages/Recipes/ComingSoonRecipe";
 import BoiledBeefSlices from "./pages/Recipes/BoiledBeefSlices";
+import logo from "./assets/logo512.png";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/recipes/ground-beef-sauce" element={<GroundBeefSauce />} />
         <Route path="/recipes/coming-soon-recipe" element={<ComingSoonRecipe />} />
         <Route path="/recipes/boiled-beef-slices" element={<BoiledBeefSlices />} />
+        <Route path="/media/logo.jpg" element={<img src={logo} alt="logo" />} />
       </Routes>
     </HashRouter>
   );
