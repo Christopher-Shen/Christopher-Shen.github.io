@@ -5,24 +5,28 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <HeaderContainer>
-      <NameContainer to='/'>chris shen</NameContainer>
-      <NavigationContainer>
-        <HeaderLink to="/">Home</HeaderLink>
-        <HeaderLink to="/recipes">Recipes</HeaderLink>
-      </NavigationContainer>
+      <HeaderContent>
+        <NameContainer to='/'>chris shen</NameContainer>
+        <NavigationContainer>
+          <HeaderLink to="/">Home</HeaderLink>
+          <HeaderLink to="/recipes">Recipes</HeaderLink>
+        </NavigationContainer>
+      </HeaderContent>
     </HeaderContainer>
   );
 };
 
-export default Header;
-
 const HeaderContainer = styled.header`
+  width: 100%;
+`;
+
+const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  // background-color: #f8f8f8;
-  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  margin: 0 auto;
+  padding: 15px 15px;
 `;
 
 const NameContainer = styled(Link)`
@@ -67,3 +71,5 @@ const HeaderLink = styled(Link)`
     }
   }
 `;
+
+export default Header;

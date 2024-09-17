@@ -44,7 +44,7 @@ const RecipePage: React.FC<RecipeProps> = ({ title, image, ingredients, steps })
                 </IngredientSection>
               ))}
             </Column>
-            <Column>
+            <Column isInstructions>
               <SectionTitle>Instructions</SectionTitle>
               <OrderedList>
                 {steps.map((step, index) => (
@@ -63,24 +63,29 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 `;
 
 const MainContent = styled.main`
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 const Title = styled.h1`
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #333;
+  word-break: break-word;
 `;
 
 const RecipeImage = styled.img`
+  display: flex;
   width: 100%;
-  height: 300px;
+  max-height: 300px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -88,26 +93,36 @@ const RecipeImage = styled.img`
 
 const RecipeContent = styled.div`
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 750px) {
+    flex-direction: row;
+  }
 `;
 
-const Column = styled.div`
+const Column = styled.div<{ isInstructions?: boolean }>`
   flex: 1;
+  min-width: 0;
+
+  @media (min-width: 750px) {
+    flex: ${props => props.isInstructions ? 2 : 1};
+  }
 `;
 
 const IngredientSection = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #333;
 `;
 
 const SubTitle = styled.h3`
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 3.5vw, 1.25rem);
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #333;
@@ -123,10 +138,11 @@ const OrderedList = styled.ol`
 `;
 
 const ListItem = styled.li`
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 3vw, 1rem);
   line-height: 1.4;
-  color: #333; // Changed from #555 to #333 for darker text
+  color: #333;
   margin-bottom: 0.25rem;
+  word-break: break-word;
 `;
 
 const Amount = styled.span`

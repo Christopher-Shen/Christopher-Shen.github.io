@@ -32,11 +32,6 @@ const RecipesPage: React.FC = () => {
           ))}
         </RecipeGrid>
       </MainContent>
-      <CookingUtensils>
-        <Utensil>🍴</Utensil>
-        <Utensil>🥄</Utensil>
-        <Utensil>🔪</Utensil>
-      </CookingUtensils>
     </PageContainer>
   );
 };
@@ -51,7 +46,6 @@ const MainContent = styled.main`
   flex: 1;
   padding: 20px;
   background-color: #ffffff;
-  margin-bottom: 60px; // Add space for the utensils
 `;
 
 const Title = styled.h1`
@@ -88,26 +82,6 @@ const RecipeTitle = styled.h2`
   color: #333;
   margin-top: 10px;
   text-transform: uppercase;
-`;
-
-const float = keyframes`
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-`;
-
-const CookingUtensils = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px 0;
-  background-color: rgba(255, 255, 255, 0.8);
-`;
-
-const Utensil = styled.span`
-  font-size: 2.5rem;
-  animation: ${float} 2s ease-in-out infinite;
-  &:nth-child(2) { animation-delay: 0.3s; }
-  &:nth-child(3) { animation-delay: 0.6s; }
 `;
 
 const RecipeLink = styled(Link)`
