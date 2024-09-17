@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dc4d6ff2.css",
-    "main.js": "/static/js/main.94d60a5e.js",
+    "main.css": "/static/css/main.f855e6bc.css",
+    "main.js": "/static/js/main.f9127408.js",
     "static/js/453.e43c3ef6.chunk.js": "/static/js/453.e43c3ef6.chunk.js",
     "static/media/cardiac_modeling.pdf": "/static/media/cardiac_modeling.95537e9a6f3e687d67e5.pdf",
     "static/media/bme.pdf": "/static/media/bme.5c978ff27d05d194ee6f.pdf",
@@ -17,12 +17,12 @@
     "static/media/headshot.jpg": "/static/media/headshot.8ae3c27e69cfc8748af3.jpg",
     "static/media/logo512.png": "/static/media/logo512.53c42934aff4d15e7e6d.png",
     "index.html": "/index.html",
-    "main.dc4d6ff2.css.map": "/static/css/main.dc4d6ff2.css.map",
-    "main.94d60a5e.js.map": "/static/js/main.94d60a5e.js.map",
+    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
+    "main.f9127408.js.map": "/static/js/main.f9127408.js.map",
     "453.e43c3ef6.chunk.js.map": "/static/js/453.e43c3ef6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc4d6ff2.css",
-    "static/js/main.94d60a5e.js"
+    "static/css/main.f855e6bc.css",
+    "static/js/main.f9127408.js"
   ]
 }
