@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
+import MetaTags from '../components/MetaTags';
 
 interface Ingredient {
   name: string;
@@ -20,8 +21,17 @@ interface RecipeProps {
 }
 
 const RecipePage: React.FC<RecipeProps> = ({ title, image, ingredients, steps }) => {
+  const description = `Recipe for ${title}`;
+  const url = `https://longvol.com/#/recipes/${title.toLowerCase().replace(/\s+/g, '-')}`;
+
   return (
     <>
+      <MetaTags
+        title={title}
+        description={description}
+        image={image}
+        url={url}
+      />
       <PageContainer>
         <Header />
         <MainContent>

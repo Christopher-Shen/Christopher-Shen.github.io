@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import Header from "../../components/Header";
+import MetaTags from '../../components/MetaTags';
 
 import streetFriedTofuImg from "../../assets/street_fried_tofu.jpg";
 import groundBeefSauceImg from "../../assets/ground_beef_sauce.jpg";
@@ -18,6 +19,12 @@ const recipes = [
 const RecipesPage: React.FC = () => {
   return (
     <PageContainer>
+      <MetaTags
+        title="Chris Shen's Recipe Collection"
+        description="Explore a variety of delicious recipes"
+        image={groundBeefSauceImg}
+        url="https://longvol.com"
+      />
       <Header />
       <MainContent>
         <Title>MY RECIPES</Title>
