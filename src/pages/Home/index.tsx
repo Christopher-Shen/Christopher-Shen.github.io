@@ -39,21 +39,43 @@ class Home extends React.Component<Props, State> {
             <TextContainer>
               <Name>Hey, I'm Chris.</Name>
               <Bio>
-                Recreational trader. Former <strong>crypto options market maker</strong> at{" "}
-                <StyledLink href="https://akunacapital.com/" target="_blank" rel="noopener noreferrer">
+                <strong>Software engineer</strong> at{" "}
+                <StyledLink
+                  href="https://usemotion.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Motion
+                </StyledLink>
+                . Former <strong>crypto options market maker</strong> at{" "}
+                <StyledLink
+                  href="https://akunacapital.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Akuna
                 </StyledLink>
-                . While there, I designed a vol arbitrage strategy, implemented a delta pooling
-                algorithm, and managed intraday risk.
+                . While there, I designed a vol arbitrage strategy, implemented
+                a delta pooling algorithm, and managed intraday risk.
                 <br />
                 <br />
-                In a past life, I was a <strong>software engineer</strong> at a social start up,
-                Yada. Before that, I was a <strong>biomedical engineer</strong> who grew stem cells
-                and turned them into{" "}
-                <StyledLink href={bme} target="_blank" rel="noopener noreferrer">
+                In a past life, I was a <strong>software engineer</strong> at a
+                social start up, Yada. Before that, I was a{" "}
+                <strong>biomedical engineer</strong> who grew stem cells and
+                turned them into{" "}
+                <StyledLink
+                  href={bme}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   cardiac tissue
                 </StyledLink>{" "}
-                for <StyledLink href={cardiac_modeling} target="_blank" rel="noopener noreferrer">
+                for{" "}
+                <StyledLink
+                  href={cardiac_modeling}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   disease modeling
                 </StyledLink>.
               </Bio>
@@ -73,8 +95,7 @@ const HomeContainer = styled.div`
   flex-direction: column;
 `;
 
-const HeaderWrapper = styled.div`
-`;
+const HeaderWrapper = styled.div``;
 
 const ContentWrapper = styled.main`
   flex: 1;
