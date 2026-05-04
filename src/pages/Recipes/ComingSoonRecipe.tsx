@@ -1,57 +1,83 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Header from "../../components/Header";
-import placeholderImg from "../../assets/recipe_placeholder.jpeg"; // You'll need to add this image
+
+import placeholderImg from "../../assets/recipe_placeholder.jpeg";
 
 const ComingSoonRecipe: React.FC = () => {
   return (
-    <PageContainer>
-      <Header />
-      <MainContent>
-        <Title>New Recipe Coming Soon!</Title>
-        <RecipeImage src={placeholderImg} alt="Recipe coming soon" />
-        <ComingSoonMessage>
-          We're cooking up something special. Check back later!
-        </ComingSoonMessage>
-      </MainContent>
-    </PageContainer>
+    <Page>
+      <Header>
+        <h1>Pork Mushroom</h1>
+        <nav aria-label="Links">
+          <Link to="/">home</Link>
+          <Link to="/recipes">recipes</Link>
+          <ExternalLink href="mailto:chris.y.shen@gmail.com">
+            email
+          </ExternalLink>
+        </nav>
+      </Header>
+
+      <RecipeImage src={placeholderImg} alt="Recipe coming soon" />
+      <p>Recipe coming soon.</p>
+    </Page>
   );
 };
 
-const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+const Page = styled.main`
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 104px 22px 96px;
+  color: #111111;
+  background: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #1b4f9c;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    padding-top: 56px;
+    padding-bottom: 64px;
+    font-size: 17px;
+  }
 `;
 
-const MainContent = styled.main`
-  flex: 1;
-  padding: 20px;
-  background-color: #ffffff;
-`;
+const Header = styled.header`
+  margin-bottom: 52px;
 
-const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
+  h1 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
 `;
 
 const RecipeImage = styled.img`
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 0 auto 20px;
   display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  margin-bottom: 36px;
 `;
 
-const ComingSoonMessage = styled.h2`
-  font-size: 1.5rem;
-  color: #666;
-  text-align: center;
-  margin-top: 40px;
-`;
+const ExternalLink = styled.a``;
 
 export default ComingSoonRecipe;

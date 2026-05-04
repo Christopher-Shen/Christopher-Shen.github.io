@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Header from "../../components/Header";
 import MetaTags from '../../components/MetaTags';
 
 import streetFriedTofuImg from "../../assets/street_fried_tofu.jpg";
@@ -12,7 +11,6 @@ import cabbageStirfryImg from "../../assets/cabbage_stirfry.jpg";
 import chickenAdoboImg from "../../assets/chicken_adobo.jpg";
 import squidAndChiveImg from "../../assets/squid_and_chives.jpg";
 import bokChoyImg from "../../assets/bok_choy.jpg";
-
 
 const recipes = [
   { id: "street-fried-tofu", title: "Street Fried Tofu", image: streetFriedTofuImg },
@@ -27,82 +25,112 @@ const recipes = [
 
 const RecipesPage: React.FC = () => {
   return (
-    <PageContainer>
+    <>
       <MetaTags
         title="Chris Shen's Recipe Collection"
         description="Explore a variety of delicious recipes"
         image="https://longvol.com/#/media/ground_beef_sauce.jpg"
         url="https://longvol.com"
       />
-      <Header />
-      <MainContent>
-        <Title>MY RECIPES</Title>
+      <Page>
+        <Header>
+          <h1>Recipes</h1>
+          <nav aria-label="Links">
+            <Link to="/">home</Link>
+            <ExternalLink
+              href="https://www.linkedin.com/in/chris-y-shen/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin
+            </ExternalLink>
+            <ExternalLink href="mailto:chris.y.shen@gmail.com">
+              email
+            </ExternalLink>
+          </nav>
+        </Header>
+
         <RecipeGrid>
           {recipes.map((recipe) => (
             <RecipeLink key={recipe.id} to={`/recipes/${recipe.id}`}>
-              <RecipeCard>
-                <RecipeImage src={recipe.image} alt={recipe.title} />
-                <RecipeTitle>{recipe.title}</RecipeTitle>
-              </RecipeCard>
+              <RecipeImage src={recipe.image} alt={recipe.title} />
+              <RecipeTitle>{recipe.title}</RecipeTitle>
             </RecipeLink>
           ))}
         </RecipeGrid>
-      </MainContent>
-    </PageContainer>
+      </Page>
+    </>
   );
 };
 
-const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+const Page = styled.main`
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 104px 22px 96px;
+  color: #111111;
+  background: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+
+  a {
+    color: #1b4f9c;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    padding-top: 56px;
+    padding-bottom: 64px;
+    font-size: 17px;
+  }
 `;
 
-const MainContent = styled.main`
-  flex: 1;
-  padding: 20px;
-  background-color: #f5f5f5;
-`;
+const Header = styled.header`
+  margin-bottom: 52px;
 
-const Title = styled.h1`
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
+  h1 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
 `;
 
 const RecipeGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-`;
-
-const RecipeCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-const RecipeImage = styled.img`
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-`;
-
-const RecipeTitle = styled.h2`
-  font-size: 1.2rem;
-  color: #333;
-  margin-top: 10px;
-  text-transform: uppercase;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 28px 22px;
 `;
 
 const RecipeLink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
+  color: #1b4f9c;
+  text-decoration: underline;
 `;
+
+const RecipeImage = styled.img`
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 8px;
+`;
+
+const RecipeTitle = styled.h2`
+  margin: 0;
+  color: #111111;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+`;
+
+const ExternalLink = styled.a``;
 
 export default RecipesPage;

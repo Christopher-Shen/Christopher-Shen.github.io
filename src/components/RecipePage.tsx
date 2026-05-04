@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Header from "./Header";
 import MetaTags from '../components/MetaTags';
 
 interface Ingredient {
@@ -32,82 +32,108 @@ const RecipePage: React.FC<RecipeProps> = ({ title, image, ingredients, steps })
         image="https://longvol.com/#/media/ground_beef_sauce.jpg"
         url={url}
       />
-      <PageContainer>
-        <Header />
-        <MainContent>
+      <Page>
+        <Header>
           <Title>{title}</Title>
-          <RecipeImage src={image} alt={title} />
-          <RecipeContent>
-            <Column>
-              <SectionTitle>Ingredients</SectionTitle>
-              {ingredients.map((section, sectionIndex) => (
-                <IngredientSection key={sectionIndex}>
-                  <SubTitle>{section.title}</SubTitle>
-                  <List>
-                    {section.items.map((item, itemIndex) => (
-                      <ListItem key={itemIndex}>
-                        {item.amount && <Amount>{item.amount}</Amount>}
-                        {item.name}
-                      </ListItem>
-                    ))}
-                  </List>
-                </IngredientSection>
+          <nav aria-label="Links">
+            <Link to="/">home</Link>
+            <Link to="/recipes">recipes</Link>
+            <ExternalLink href="mailto:chris.y.shen@gmail.com">
+              email
+            </ExternalLink>
+          </nav>
+        </Header>
+
+        <RecipeImage src={image} alt={title} />
+
+        <RecipeContent>
+          <Column>
+            <SectionTitle>Ingredients</SectionTitle>
+            {ingredients.map((section, sectionIndex) => (
+              <IngredientSection key={sectionIndex}>
+                <SubTitle>{section.title}</SubTitle>
+                <List>
+                  {section.items.map((item, itemIndex) => (
+                    <ListItem key={itemIndex}>
+                      {item.amount && <Amount>{item.amount}</Amount>}
+                      {item.name}
+                    </ListItem>
+                  ))}
+                </List>
+              </IngredientSection>
+            ))}
+          </Column>
+          <Column isInstructions>
+            <SectionTitle>Instructions</SectionTitle>
+            <OrderedList>
+              {steps.map((step, index) => (
+                <ListItem key={index}>{step}</ListItem>
               ))}
-            </Column>
-            <Column isInstructions>
-              <SectionTitle>Instructions</SectionTitle>
-              <OrderedList>
-                {steps.map((step, index) => (
-                  <ListItem key={index}>{step}</ListItem>
-                ))}
-              </OrderedList>
-            </Column>
-          </RecipeContent>
-        </MainContent>
-      </PageContainer>
+            </OrderedList>
+          </Column>
+        </RecipeContent>
+      </Page>
     </>
   );
 };
 
-const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
+const Page = styled.main`
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 104px 22px 96px;
+  color: #111111;
+  background: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+
+  a {
+    color: #1b4f9c;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    padding-top: 56px;
+    padding-bottom: 64px;
+    font-size: 17px;
+  }
 `;
 
-const MainContent = styled.main`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
+const Header = styled.header`
+  margin-bottom: 52px;
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: clamp(1.5rem, 5vw, 2rem);
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #333;
-  word-break: break-word;
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
 `;
 
 const RecipeImage = styled.img`
-  display: flex;
+  display: block;
   width: 100%;
-  max-height: 300px;
+  max-height: 340px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
 `;
 
 const RecipeContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 34px;
 
   @media (min-width: 750px) {
     flex-direction: row;
+    gap: 48px;
   }
 `;
 
@@ -121,44 +147,46 @@ const Column = styled.div<{ isInstructions?: boolean }>`
 `;
 
 const IngredientSection = styled.div`
-  margin-bottom: 5px;
+  margin-bottom: 18px;
 `;
 
 const SectionTitle = styled.h2`
-  font-size: clamp(1.2rem, 4vw, 1.5rem);
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #333;
+  margin: 0 0 14px;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.3;
 `;
 
 const SubTitle = styled.h3`
-  font-size: clamp(1rem, 3.5vw, 1.25rem);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #333;
+  margin: 0 0 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
 `;
 
 const List = styled.ul`
   padding-left: 20px;
-  margin-bottom: 10px;
+  margin: 0;
 `;
 
 const OrderedList = styled.ol`
   padding-left: 20px;
+  margin: 0;
 `;
 
 const ListItem = styled.li`
-  font-size: clamp(0.9rem, 3vw, 1rem);
-  line-height: 1.4;
-  color: #333;
-  margin-bottom: 0.25rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
   word-break: break-word;
 `;
 
 const Amount = styled.span`
-  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
   margin-right: 4px;
-  color: #333; // Added to ensure amount is also darker
 `;
+
+const ExternalLink = styled.a``;
 
 export default RecipePage;

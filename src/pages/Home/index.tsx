@@ -1,162 +1,137 @@
-import * as React from "react";
-
+import React from "react";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
-import headshot from "../../assets/headshot.jpg"
-import logo from "../../assets/logo512.png"
-
-import bme from "../../assets/bme.pdf"
-import cardiac_modeling from "../../assets/cardiac_modeling.pdf"
-
-import Footer from "../../components/Footer";
-import Header from "../../components/Header"
+import bme from "../../assets/bme.pdf";
+import cardiacModeling from "../../assets/cardiac_modeling.pdf";
 import MetaTags from "../../components/MetaTags";
 
-interface State { }
-
-interface Props { }
-
-class Home extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-  }
-
-  render() {
-    return (<>
+const Home: React.FC = () => {
+  return (
+    <>
       <MetaTags
         title="Chris Shen"
-        description="Recreational trader. Previously professional trader at Akuna."
+        description="Software engineer at Motion. Former crypto options market maker at Akuna."
         image="https://longvol.com/#/media/logo512.png"
         url="https://longvol.com"
       />
-      <HomeContainer>
-        <HeaderWrapper>
-          <Header />
-        </HeaderWrapper>
-        <ContentWrapper>
-          <Center>
-            <HeadshotContainer src={headshot} alt="Chris Shen" />
-            <TextContainer>
-              <Name>Hey, I'm Chris.</Name>
-              <Bio>
-                <strong>Software engineer</strong> at{" "}
-                <StyledLink
-                  href="https://usemotion.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Motion
-                </StyledLink>
-                . Former <strong>crypto options market maker</strong> at{" "}
-                <StyledLink
-                  href="https://akunacapital.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Akuna
-                </StyledLink>
-                . While there, I designed a vol arbitrage strategy, implemented
-                a delta pooling algorithm, and managed intraday risk.
-                <br />
-                <br />
-                In a past life, I was a <strong>software engineer</strong> at a
-                social start up, Yada. Before that, I was a{" "}
-                <strong>biomedical engineer</strong> who grew stem cells and
-                turned them into{" "}
-                <StyledLink
-                  href={bme}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  cardiac tissue
-                </StyledLink>{" "}
-                for{" "}
-                <StyledLink
-                  href={cardiac_modeling}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  disease modeling
-                </StyledLink>.
-              </Bio>
-            </TextContainer>
-          </Center>
-        </ContentWrapper>
-        <Footer />
-      </HomeContainer>
+      <Page>
+        <Header>
+          <h1>Hi, I'm Chris.</h1>
+          <nav aria-label="Links">
+            <Link to="/recipes">recipes</Link>
+            <ExternalLink
+              href="https://www.linkedin.com/in/chris-y-shen/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin
+            </ExternalLink>
+            <ExternalLink href="mailto:chris.y.shen@gmail.com">
+              email
+            </ExternalLink>
+          </nav>
+        </Header>
+
+        <p>
+          Software engineer at{" "}
+          <ExternalLink
+            href="https://usemotion.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Motion
+          </ExternalLink>
+          .
+        </p>
+
+        <p>
+          Former crypto options market maker at{" "}
+          <ExternalLink
+            href="https://akunacapital.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Akuna
+          </ExternalLink>
+          . While there, I designed a vol arbitrage strategy, implemented a
+          delta pooling algorithm, and managed intraday risk.
+        </p>
+
+        <p>
+          In a past life, I was a software engineer at a social start up,{" "}
+          <ExternalLink
+            href="https://yada.land"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Yada
+          </ExternalLink>
+          . Before that, I was a biomedical engineer who grew stem cells and
+          turned them into{" "}
+          <ExternalLink href={bme} target="_blank" rel="noopener noreferrer">
+            cardiac tissue
+          </ExternalLink>{" "}
+          for{" "}
+          <ExternalLink
+            href={cardiacModeling}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            disease modeling
+          </ExternalLink>
+          .
+        </p>
+      </Page>
     </>
-    );
-  }
-}
+  );
+};
 
-const HomeContainer = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
-
-const HeaderWrapper = styled.div``;
-
-const ContentWrapper = styled.main`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background-color: #f5f5f5;
-`;
-
-const Center = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  max-width: 800px;
-  width: 100%;
-  padding: 1rem;
-  
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-`;
-
-const HeadshotContainer = styled.img`
-  width: 250px;
-  height: 250px;
-  border-radius: 25px;
-  object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-`;
-
-const TextContainer = styled.div`
-  text-align: center;
-  
-  @media (min-width: 768px) {
-    text-align: left;
-  }
-`;
-
-const Name = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #333;
-`;
-
-const Bio = styled.p`
-  font-size: 1.25rem;
+const Page = styled.main`
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 104px 22px 96px;
+  color: #111111;
+  background: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
   line-height: 1.6;
-  color: #555;
-`;
 
-const StyledLink = styled.a`
-  color: #0077b5;
-  text-decoration: none;
-  font-weight: 500;
-  
-  &:hover {
+  p {
+    margin: 0 0 28px;
+  }
+
+  a {
+    color: #1b4f9c;
     text-decoration: underline;
   }
+
+  @media (max-width: 640px) {
+    padding-top: 56px;
+    padding-bottom: 64px;
+    font-size: 17px;
+  }
 `;
+
+const Header = styled.header`
+  margin-bottom: 52px;
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+`;
+
+const ExternalLink = styled.a``;
 
 export default Home;
