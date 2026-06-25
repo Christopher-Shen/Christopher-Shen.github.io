@@ -11,7 +11,7 @@ const Home: React.FC = () => {
     <>
       <MetaTags
         title="Chris Shen"
-        description="Software engineer at Motion. Former crypto options market maker at Akuna."
+        description="Working on projects. Former engineer at Motion. Before that was a crypto options market maker at Akuna."
         image="https://longvol.com/#/media/logo512.png"
         url="https://longvol.com"
       />
@@ -33,8 +33,10 @@ const Home: React.FC = () => {
           </nav>
         </Header>
 
+        <p>Working on projects.</p>
+
         <p>
-          Software engineer at{" "}
+          Former engineer at{" "}
           <ExternalLink
             href="https://usemotion.com/"
             target="_blank"
@@ -42,11 +44,7 @@ const Home: React.FC = () => {
           >
             Motion
           </ExternalLink>
-          .
-        </p>
-
-        <p>
-          Former crypto options market maker at{" "}
+          . Before that was a crypto options market maker at{" "}
           <ExternalLink
             href="https://akunacapital.com/"
             target="_blank"
