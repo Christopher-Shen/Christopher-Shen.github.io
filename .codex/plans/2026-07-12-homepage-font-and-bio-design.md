@@ -19,7 +19,7 @@ Refresh the homepage introduction while preserving the site's current structure 
 
 ## Responsive Behavior
 
-Retain the current desktop and mobile spacing and type scale for this first visual experiment. Only the font family/weight and copy change, making it easy to evaluate the typography independently before considering a larger centered redesign.
+Retain the current desktop and mobile spacing and left-aligned layout. After reviewing the first preview, use normal weight (`400`) to more closely match the visual density of Leo Adberg's `HelveticaNeue-Light` treatment. Increase the body from 18px to 20px, the heading from 24px to 28px, navigation from 14px to 15px, and the mobile body from 17px to 19px.
 
 ## Validation
 
