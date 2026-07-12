@@ -19,7 +19,7 @@ Refresh the homepage introduction while preserving the site's current structure 
 
 ## Responsive Behavior
 
-Retain the current desktop and mobile spacing and left-aligned layout. After reviewing the first preview, use normal weight (`400`) to more closely match the visual density of Leo Adberg's `HelveticaNeue-Light` treatment. Increase the body from 18px to 20px, the heading from 24px to 28px, navigation from 14px to 15px, and the mobile body from 17px to 19px.
+After reviewing the first previews, move closer to Leo Adberg's presentation: use normal weight (`400`), center the heading, navigation, and bio, and expand the page to 75% of the viewport with a 1050px maximum. Use a tighter `1.25` line height, `#5e5e5e` text, and `#222222` links. Keep the modestly enlarged scale: 20px body, 28px heading, 15px navigation, and 19px mobile body. On narrow screens, use the full available width with the existing horizontal padding.
 
 ## Validation
 
