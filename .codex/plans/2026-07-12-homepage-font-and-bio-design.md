@@ -19,7 +19,7 @@ Refresh the homepage introduction while preserving the site's current structure 
 
 ## Responsive Behavior
 
-After reviewing the first previews, move closer to Leo Adberg's presentation: use normal weight (`400`), center the heading, navigation, and bio, and expand the page to 75% of the viewport with a 1050px maximum. Use a tighter `1.25` line height, `#5e5e5e` text, and `#222222` links. Keep the modestly enlarged scale: 20px body, 28px heading, 15px navigation, and 19px mobile body. On narrow screens, use the full available width with the existing horizontal padding.
+After reviewing the previews, use normal weight (`400`), left-align the heading, navigation, and bio, and expand the page to 75% of the viewport with a 1050px maximum. Use a tight `1.25` line height, `#5e5e5e` text, and `#222222` links. Increase the scale to a 24px body, 34px heading, 16px navigation, and 21px mobile body. On narrow screens, use the full available width with the existing horizontal padding.
 
 ## Validation
 
