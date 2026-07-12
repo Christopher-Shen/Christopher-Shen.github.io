@@ -11,13 +11,13 @@ const Home: React.FC = () => {
     <>
       <MetaTags
         title="Chris Shen"
-        description="Working on projects. Former engineer at Motion. Before that was a crypto options market maker at Akuna."
+        description="Working on probabilistic markets. Former crypto options market maker at Akuna with a background in biomedical engineering, AI, and social startups."
         image="https://longvol.com/#/media/logo512.png"
         url="https://longvol.com"
       />
       <Page>
         <Header>
-          <h1>Hi, I'm Chris.</h1>
+          <h1>Hi, I'm CHRIS SHEN</h1>
           <nav aria-label="Links">
             <Link to="/recipes">recipes</Link>
             <ExternalLink
@@ -33,18 +33,9 @@ const Home: React.FC = () => {
           </nav>
         </Header>
 
-        <p>Working on projects.</p>
-
         <p>
-          Former engineer at{" "}
-          <ExternalLink
-            href="https://usemotion.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Motion
-          </ExternalLink>
-          . Before that was a crypto options market maker at{" "}
+          I’m working on probabilistic markets. I was previously a crypto
+          options market maker at{" "}
           <ExternalLink
             href="https://akunacapital.com/"
             target="_blank"
@@ -52,21 +43,8 @@ const Home: React.FC = () => {
           >
             Akuna
           </ExternalLink>
-          . While there, I designed a vol arbitrage strategy, implemented a
-          delta pooling algorithm, and managed intraday risk.
-        </p>
-
-        <p>
-          In a past life, I was a software engineer at a social start up,{" "}
-          <ExternalLink
-            href="https://yada.land"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Yada
-          </ExternalLink>
-          . Before that, I was a biomedical engineer who grew stem cells and
-          turned them into{" "}
+          , and graduated from Columbia University with a B.S. in Biomedical
+          Engineering. Before markets, I grew stem cells into{" "}
           <ExternalLink href={bme} target="_blank" rel="noopener noreferrer">
             cardiac tissue
           </ExternalLink>{" "}
@@ -78,7 +56,8 @@ const Home: React.FC = () => {
           >
             disease modeling
           </ExternalLink>
-          .
+          . I like modeling uncertain systems, but have also built software at
+          AI and social startups.
         </p>
       </Page>
     </>
@@ -86,37 +65,43 @@ const Home: React.FC = () => {
 };
 
 const Page = styled.main`
-  max-width: 760px;
+  box-sizing: border-box;
+  width: 75%;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 104px 22px 96px;
-  color: #111111;
+  color: #5e5e5e;
   background: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.6;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.25;
+  text-align: left;
 
   p {
     margin: 0 0 28px;
   }
 
   a {
-    color: #1b4f9c;
+    color: #222222;
     text-decoration: underline;
   }
 
   @media (max-width: 640px) {
+    width: 100%;
     padding-top: 56px;
     padding-bottom: 64px;
-    font-size: 17px;
+    font-size: 23px;
   }
 `;
 
 const Header = styled.header`
   margin-bottom: 52px;
+  text-align: left;
 
   h1 {
     margin: 0 0 8px;
-    font-size: 24px;
+    font-size: 38px;
     font-weight: 400;
     line-height: 1.2;
   }
@@ -124,9 +109,10 @@ const Header = styled.header`
   nav {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 12px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 17px;
   }
 `;
 
