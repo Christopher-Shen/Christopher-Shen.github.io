@@ -35,7 +35,7 @@ const RecipePage: React.FC<RecipeProps> = ({ title, image, ingredients, steps })
       />
       <SitePage>
         <SiteHeader>
-          <Title>{title}</Title>
+          <h1>{title}</h1>
           <nav aria-label="Links">
             <Link to="/">home</Link>
             <Link to="/recipes">recipes</Link>
@@ -78,13 +78,6 @@ const RecipePage: React.FC<RecipeProps> = ({ title, image, ingredients, steps })
   );
 };
 
-const Title = styled.h1`
-  margin: 0 0 8px;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.2;
-`;
-
 const RecipeImage = styled.img`
   display: block;
   width: 100%;
@@ -119,15 +112,15 @@ const IngredientSection = styled.div`
 
 const SectionTitle = styled.h2`
   margin: 0 0 14px;
-  font-size: 19px;
+  font-size: 26px;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.25;
 `;
 
 const SubTitle = styled.h3`
   margin: 0 0 6px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 1.3;
 `;

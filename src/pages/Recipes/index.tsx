@@ -71,7 +71,7 @@ const RecipeGrid = styled.div`
 `;
 
 const RecipeLink = styled(Link)`
-  color: #1b4f9c;
+  color: #222222;
   text-decoration: underline;
 `;
 
@@ -85,10 +85,10 @@ const RecipeImage = styled.img`
 
 const RecipeTitle = styled.h2`
   margin: 0;
-  color: #111111;
-  font-size: 18px;
+  color: #222222;
+  font-size: 26px;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.25;
 `;
 
 const ExternalLink = styled.a``;
