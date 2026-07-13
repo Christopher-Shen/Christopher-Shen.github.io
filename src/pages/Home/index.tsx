@@ -12,13 +12,13 @@ const Home: React.FC = () => {
     <>
       <MetaTags
         title="Chris Shen"
-        description="Working on projects. Former engineer at Motion. Before that was a crypto options market maker at Akuna."
+        description="Working on probabilistic markets. Former crypto options market maker at Akuna with a background in biomedical engineering, AI, and social startups."
         image="https://longvol.com/#/media/logo512.png"
         url="https://longvol.com"
       />
       <SitePage>
         <SiteHeader>
-          <h1>Hi, I'm Chris.</h1>
+          <h1>Hi, I'm CHRIS SHEN</h1>
           <nav aria-label="Links">
             <Link to="/recipes">recipes</Link>
             <ExternalLink
@@ -34,18 +34,9 @@ const Home: React.FC = () => {
           </nav>
         </SiteHeader>
 
-        <p>Working on projects.</p>
-
         <p>
-          Former engineer at{" "}
-          <ExternalLink
-            href="https://usemotion.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Motion
-          </ExternalLink>
-          . Before that was a crypto options market maker at{" "}
+          I’m working on probabilistic markets. I was previously a crypto
+          options market maker at{" "}
           <ExternalLink
             href="https://akunacapital.com/"
             target="_blank"
@@ -53,21 +44,8 @@ const Home: React.FC = () => {
           >
             Akuna
           </ExternalLink>
-          . While there, I designed a vol arbitrage strategy, implemented a
-          delta pooling algorithm, and managed intraday risk.
-        </p>
-
-        <p>
-          In a past life, I was a software engineer at a social start up,{" "}
-          <ExternalLink
-            href="https://yada.land"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Yada
-          </ExternalLink>
-          . Before that, I was a biomedical engineer who grew stem cells and
-          turned them into{" "}
+          , and graduated from Columbia University with a B.S. in Biomedical
+          Engineering. Before markets, I grew stem cells into{" "}
           <ExternalLink href={bme} target="_blank" rel="noopener noreferrer">
             cardiac tissue
           </ExternalLink>{" "}
@@ -79,7 +57,8 @@ const Home: React.FC = () => {
           >
             disease modeling
           </ExternalLink>
-          .
+          . I like modeling uncertain systems, but have also built software at
+          AI and social startups.
         </p>
       </SitePage>
     </>

@@ -19,7 +19,7 @@ Refresh the homepage introduction while preserving the site's current structure 
 
 ## Responsive Behavior
 
-Retain the current desktop and mobile spacing and type scale for this first visual experiment. Only the font family/weight and copy change, making it easy to evaluate the typography independently before considering a larger centered redesign.
+After reviewing the previews, use normal weight (`400`), left-align the heading, navigation, and bio, and expand the page to 75% of the viewport with a 1050px maximum. Use a tight `1.25` line height, `#5e5e5e` text, and `#222222` links. Increase the scale to a 26px body, 38px heading, 17px navigation, and 23px mobile body. On narrow screens, use the full available width with the existing horizontal padding.
 
 ## Validation
 
