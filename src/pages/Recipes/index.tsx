@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import MetaTags from '../../components/MetaTags';
+import { SiteHeader, SitePage } from "../../components/SiteLayout";
 
 import streetFriedTofuImg from "../../assets/street_fried_tofu.jpg";
 import groundBeefSauceImg from "../../assets/ground_beef_sauce.jpg";
@@ -32,8 +33,8 @@ const RecipesPage: React.FC = () => {
         image="https://longvol.com/#/media/ground_beef_sauce.jpg"
         url="https://longvol.com"
       />
-      <Page>
-        <Header>
+      <SitePage>
+        <SiteHeader>
           <h1>Recipes</h1>
           <nav aria-label="Links">
             <Link to="/">home</Link>
@@ -48,7 +49,7 @@ const RecipesPage: React.FC = () => {
               email
             </ExternalLink>
           </nav>
-        </Header>
+        </SiteHeader>
 
         <RecipeGrid>
           {recipes.map((recipe) => (
@@ -58,51 +59,10 @@ const RecipesPage: React.FC = () => {
             </RecipeLink>
           ))}
         </RecipeGrid>
-      </Page>
+      </SitePage>
     </>
   );
 };
-
-const Page = styled.main`
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 104px 22px 96px;
-  color: #111111;
-  background: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.6;
-
-  a {
-    color: #1b4f9c;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 640px) {
-    padding-top: 56px;
-    padding-bottom: 64px;
-    font-size: 17px;
-  }
-`;
-
-const Header = styled.header`
-  margin-bottom: 52px;
-
-  h1 {
-    margin: 0 0 8px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-`;
 
 const RecipeGrid = styled.div`
   display: grid;

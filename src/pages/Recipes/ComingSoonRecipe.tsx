@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { SiteHeader, SitePage } from "../../components/SiteLayout";
 
 import placeholderImg from "../../assets/recipe_placeholder.jpeg";
 
 const ComingSoonRecipe: React.FC = () => {
   return (
-    <Page>
-      <Header>
+    <SitePage>
+      <SiteHeader>
         <h1>Pork Mushroom</h1>
         <nav aria-label="Links">
           <Link to="/">home</Link>
@@ -16,58 +17,13 @@ const ComingSoonRecipe: React.FC = () => {
             email
           </ExternalLink>
         </nav>
-      </Header>
+      </SiteHeader>
 
       <RecipeImage src={placeholderImg} alt="Recipe coming soon" />
       <p>Recipe coming soon.</p>
-    </Page>
+    </SitePage>
   );
 };
-
-const Page = styled.main`
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 104px 22px 96px;
-  color: #111111;
-  background: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.6;
-
-  p {
-    margin: 0;
-  }
-
-  a {
-    color: #1b4f9c;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 640px) {
-    padding-top: 56px;
-    padding-bottom: 64px;
-    font-size: 17px;
-  }
-`;
-
-const Header = styled.header`
-  margin-bottom: 52px;
-
-  h1 {
-    margin: 0 0 8px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-`;
 
 const RecipeImage = styled.img`
   display: block;

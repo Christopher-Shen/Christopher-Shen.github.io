@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import MetaTags from '../components/MetaTags';
+import { SiteHeader, SitePage } from './SiteLayout';
 
 interface Ingredient {
   name: string;
@@ -32,8 +33,8 @@ const RecipePage: React.FC<RecipeProps> = ({ title, image, ingredients, steps })
         image="https://longvol.com/#/media/ground_beef_sauce.jpg"
         url={url}
       />
-      <Page>
-        <Header>
+      <SitePage>
+        <SiteHeader>
           <Title>{title}</Title>
           <nav aria-label="Links">
             <Link to="/">home</Link>
@@ -42,7 +43,7 @@ const RecipePage: React.FC<RecipeProps> = ({ title, image, ingredients, steps })
               email
             </ExternalLink>
           </nav>
-        </Header>
+        </SiteHeader>
 
         <RecipeImage src={image} alt={title} />
 
@@ -72,44 +73,10 @@ const RecipePage: React.FC<RecipeProps> = ({ title, image, ingredients, steps })
             </OrderedList>
           </Column>
         </RecipeContent>
-      </Page>
+      </SitePage>
     </>
   );
 };
-
-const Page = styled.main`
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 104px 22px 96px;
-  color: #111111;
-  background: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.6;
-
-  a {
-    color: #1b4f9c;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 640px) {
-    padding-top: 56px;
-    padding-bottom: 64px;
-    font-size: 17px;
-  }
-`;
-
-const Header = styled.header`
-  margin-bottom: 52px;
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-`;
 
 const Title = styled.h1`
   margin: 0 0 8px;

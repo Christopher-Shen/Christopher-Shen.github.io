@@ -5,6 +5,7 @@ import { styled } from "styled-components";
 import bme from "../../assets/bme.pdf";
 import cardiacModeling from "../../assets/cardiac_modeling.pdf";
 import MetaTags from "../../components/MetaTags";
+import { SiteHeader, SitePage } from "../../components/SiteLayout";
 
 const Home: React.FC = () => {
   return (
@@ -15,8 +16,8 @@ const Home: React.FC = () => {
         image="https://longvol.com/#/media/logo512.png"
         url="https://longvol.com"
       />
-      <Page>
-        <Header>
+      <SitePage>
+        <SiteHeader>
           <h1>Hi, I'm Chris.</h1>
           <nav aria-label="Links">
             <Link to="/recipes">recipes</Link>
@@ -31,7 +32,7 @@ const Home: React.FC = () => {
               email
             </ExternalLink>
           </nav>
-        </Header>
+        </SiteHeader>
 
         <p>Working on projects.</p>
 
@@ -80,55 +81,10 @@ const Home: React.FC = () => {
           </ExternalLink>
           .
         </p>
-      </Page>
+      </SitePage>
     </>
   );
 };
-
-const Page = styled.main`
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 104px 22px 96px;
-  color: #111111;
-  background: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.6;
-
-  p {
-    margin: 0 0 28px;
-  }
-
-  a {
-    color: #1b4f9c;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 640px) {
-    padding-top: 56px;
-    padding-bottom: 64px;
-    font-size: 17px;
-  }
-`;
-
-const Header = styled.header`
-  margin-bottom: 52px;
-
-  h1 {
-    margin: 0 0 8px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-`;
 
 const ExternalLink = styled.a``;
 
